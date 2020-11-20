@@ -32,8 +32,8 @@ def your_circuit(oracle):
     yield cirq.H(q0), cirq.H(q1), cirq.H(q2)
 
     # a final OR gate to put result in final qubit
-    #yield cirq.X(q0), cirq.X(q1), cirq.CCX(q0, q1, q2)
-    yield cirq.measure(q0), cirq.measure(q1)
+    yield cirq.X(q0), cirq.X(q1), cirq.CCX(q0, q1, q2)
+    yield cirq.measure(q2)
 
 # Get a simulator
 simulator = cirq.Simulator()
